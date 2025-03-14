@@ -1,40 +1,46 @@
 #include <stdio.h>
 
 int main(int argc, char const *argv[])
-{
-   printf("Ingrese los números que desea operar\n,");
-   scanf("%d", &num_1);
-   printf("Ingrese los números que desea operar\n",);
-   scanf("%d", &num_2);
 
-   printf("Elija Operación");
-   printf("1. Suma\n2. Resta\n3. Multiplicación\n.4 División\n");
+{
+    float num1, num2, resultado ;
+    char operaciones; 
+    do{
+    
+   printf("Ingrese los numeros que desea operar\n");
+   scanf("%d", &num1);
+   printf("Ingrese los numeros que desea operar\n");
+   scanf("%d", &num2);
+   printf("Elija Operacion");
+   printf("1. Suma\n2. Resta\n3. Multiplicacion\n.4 Division\n 5. Para salir ponga ? \n");
+   setbuf(stdin, NULL);
    scanf("%d", &operaciones);
 
    switch (operaciones)
    {
    case 1 : 
-        Respuesta = num_1 + num_2;
-        printf(Respuesta);
+        resultado = num1 + num2;
+        printf("El resultado es: %d \n ", resultado);
     break;
    case 2 :
-         Respuesta = num_1 - num_2;
-         printf(Respuesta);
+        resultado = num1 - num2;
+         printf("El resultado es: %d \n ", resultado);
     break;
    case 3 : 
-       Respuesta = num_1 * num_2;
-       printf(Respuesta);
+       resultado = num1 * num2;
+       printf("El resultado es: %d \n ", resultado);
    break;
   case 4 : 
-      Respuesta = num_1 / num_2;
-      printf(Respuesta);
+      resultado = num1 / num2;
+      printf("El resultado es: %d \n ", resultado);
    break;
    default: 
    printf("Operación no valida \n");
    break;
-   }
-
-
+   } 
+    }
+   while (operaciones != '?');
+   
     return 0;
 }
 
