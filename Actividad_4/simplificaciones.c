@@ -1,0 +1,1 @@
+void simplificar(int, int, int )
